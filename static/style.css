@@ -187,11 +187,13 @@ a:hover {
         flex-direction: column;
         position: absolute;
         top: 5rem;
+        margin-left: 5em;
     }
     header nav::after {
         content: "☰";
         font-size: 30px;
         cursor: pointer;
+        margin-left: 3em;
     }
     /* Add these styles for the .visible class */
     header nav ul.visible {
