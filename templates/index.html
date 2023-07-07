@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="/favicon.ico" type="image/x-icon" rel="icon" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <title>My Webpage</title>
+</head>
+
+<body>
+    <header>
+        <img src="/static/micheal.jpg" alt="Senkasi Micheal">
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#learn">Learn</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#opportunities">Opportunities</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home_formulas1" class="home_formulas">
+        <div id="myProgress">
+            <div id="myBar">$$\chi^2 = \sum_{i=1}^{n} \frac{(O_i - E_i)^2}{E_i}$$</div>
+        </div>
+    </section>
+
+    <section id="home_formulas2">
+        <div id="myProgress">
+            <div id="myBar">$$\hat{y} = \beta_0 + \beta_1x$$</div>
+        </div>
+    </section>
+
+    <section id="home_formulas3">
+        <div id="myProgress">
+            <div id="myBar">$$p = \frac{1}{1 + e^{-(\beta_0 + \beta_1x)}}$$</div>
+        </div>
+    </section>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+    <section id="about" class="section_body">
+        <h2>About Senkasi Micheal</h2>
+        <ul class="list_about">
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Work Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+        </ul>
+        <section id="education">
+            <table>
+                <tr>
+                    <th>Year</th>
+                    <th>Education</th>
+                </tr>
+                <tr>
+                    <td>2019 - 2022</td>
+                    <td>Bachelor of Statistics (Statistical Computing) at Makerere University, Kampala, Uganda</td>
+                </tr>
+                <tr>
+                    <td>2017 - 2018</td>
+                    <td>Uganda Advanced Certificate of Education at Nakasongola secondary school, Uganda</td>
+                </tr>
+                <tr>
+                    <td>2013 - 2016</td>
+                    <td>Uganda Certificate of Education at Nakasongola secondary school, Uganda</td>
+                </tr>
+                <tr>
+                    <td>2006 - 2012</td>
+                    <td>Primary Level, Nakasongola, Uganda</td>
+                </tr>
+            </table>
+        </section>
+        <section id="experience">
+            <table>
+                <tr>
+                    <th>Period</th>
+                    <th>Company</th>
+                    <th>Role</th>
+                    <th>Activities</th>
+                </tr>
+                <tr>
+                    <td>November 2022 to Present</td>
+                    <td>3D Services (U) Ltd Kisaasi</td>
+                    <td>Data analyst</td>
+                    <td>
+                        <p>Generated timely data that helped management better understand asset utilization based on accurate picture instead of relying on paper trails and gut instinct. For example, data showed which individual vehicles or pieces of machinery
+                            were spending too much time lying idle, or which needed servicing after heavy use for a sustained period of time. By assessing how fleet of vehicles were being used over a six-month period, the company’s management implemented
+                            changes, which saved more than 780 labour hours. This greatly increased operational efficiency and meant some of its workforce could be allocated elsewhere</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>August 2022 to November 2022</td>
+                    <td>
+                        <p>Statistical research supervised by Dr. Yeko Mwanga (PhD) at Makerere university department of Statistical Methods and Actuarial science</p>
+                        <p>Research Topic: Analysis of the uptake of optimal doses for malaria treatment in Nakasongola district a case study of Nakasongola tow council</p>
+                    </td>
+                    <td>Statistician</td>
+                    <td>Data collection, transformation, cleaning, report writing, data analysis, interpretation, and presentation</td>
+                </tr>
+                <tr>
+                    <td>Feb 2022 to April 2022</td>
+                    <td>
+                        <p>Field training supervised by Dr. Yeko Mwanga (PhD) at Makerere university department of Statistical Methods and Actuarial science</p>
+                        <p>Research Topic: Determinants of pig rearing in Uganda</p>
+                    </td>
+                    <td>Statistician</td>
+                    <td>Data collection, data analysis, interpretation, report writing, and presentation</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="skills">
+            <h3>Computer And Statistical Skills</h3>
+            <p>Data collection, manipulation, transformation, modelling, analysis, econometrics and knowledge presentation</p>
+            <p>Microsoft packages: Microsoft Word, Microsoft Excel, Microsoft PowerPoint</p>
+            <p>Statistical software: STATA, SPSS, R, MYSQL, Python</p>
+            <p>Research and analytical skills</p>
+            <p>Questionnaire design: Kobo collect, and Epidata</p>
+        </section>
+
+        <script>
+            const educationLink = document.querySelector('a[href="#education"]');
+            const educationSection = document.querySelector('#education');
+
+            educationLink.addEventListener('click', (event) => {
+                event.preventDefault();
+                if (educationSection.style.display === 'none') {
+                    educationSection.style.display = 'block';
+                    experienceSection.style.display = 'none';
+                    skillsSection.style.display = 'none';
+                } else {
+                    educationSection.style.display = 'block';
+                    experienceSection.style.display = 'none';
+                    skillsSection.style.display = 'none';
+                }
+            });
+
+            const experienceLink = document.querySelector('a[href="#experience"]');
+            const experienceSection = document.querySelector('#experience');
+
+            experienceLink.addEventListener('click', (event) => {
+                event.preventDefault();
+                if (experienceSection.style.display === 'none') {
+                    experienceSection.style.display = 'block';
+                    educationSection.style.display = 'none';
+                    skillsSection.style.display = 'none';
+                } else {
+                    experienceSection.style.display = 'block';
+                    educationSection.style.display = 'none';
+                    skillsSection.style.display = 'none';
+                }
+            });
+
+            const skillsLink = document.querySelector('a[href="#skills"]');
+            const skillsSection = document.querySelector('#skills');
+
+            skillsLink.addEventListener('click', (event) => {
+                event.preventDefault();
+                if (skillsSection.style.display === 'none') {
+                    skillsSection.style.display = 'block';
+                    educationSection.style.display = 'none';
+                    experienceSection.style.display = 'none';
+                } else {
+                    skillsSection.style.display = 'block';
+                    educationSection.style.display = 'none';
+                    experienceSection.style.display = 'none';
+                }
+            });
+        </script>
+    </section>
+
+    <section id="contact" aria-colspan="" class="section_body">
+        <h2>Contact us</h2>
+        <div class="contact_form_div">
+            <form action="">
+                <input type="text" placeholder="full name" class="box" required>
+                <input type="email" placeholder="your email address" class="box" required>
+                <input type="tel" placeholder="telephone number" class="box">
+                <textarea name="" id="" cols="30" rows="10" class="box address" placeholder="describe your querry"></textarea>
+                <input type="submit" class="btn" value="send now ">
+            </form>
+        </div>
+    </section>
+
+    <section id="learn" class="section_body">
+        <h2>Learn with us</h2>
+        <p>No updates...</p>
+    </section>
+
+    <section id="projects" class="section_body">
+        <h2>Projects</h2>
+        <table>
+            <tr>
+                <th>Project title</th>
+                <th>Type</th>
+                <th>Details</th>
+                <th>Project link</th>
+            </tr>
+            <tr>
+                <td>t-test</td>
+                <td>C programing</td>
+                <td>This was a project to carry out a 2 sample t test and test for statistical significance of the difference in the means of two samples</td>
+                <td>
+                    <a href="https://github.com/senkasimicheal/t-test/tree/master">Visit github repo</a>
+                </td>
+            </tr>
+            <tr>
+                <td>g and h control charts</td>
+                <td>R programing</td>
+                <td>This project aimed at automating the statistical test for industrial defects to see if the process is in control or not following a .. distribution</td>
+                <td>
+                    <a href="https://github.com/senkasimicheal/g-and-h-chart-in-r">Visit github repo</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Credit analysis</td>
+                <td>Python</td>
+                <td>This project aimed at using a best machine learning model to predict the eligibility of a client for a credit, the model was tested using statistical methods</td>
+                <td>
+                    <p><a href="https://github.com/senkasimicheal/credits">Source code</a></p>
+                    <p><a href="https://creditability.onrender.com">Deployed site</a></p>
+                </td>
+            </tr>
+            <tr>
+                <td>Statistical research</td>
+                <td>STATA</td>
+                <td>Analysis of the uptake of optimal doses for malaria treatment in Nakasongola district. A case study of Nakasongola towncouncil.</td>
+                <td>
+                    <a href="http://dissertations.mak.ac.ug/handle/20.500.12281/13798">Tap to view research paper</a>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="opportunities" class="section_body">
+        <h2>Opportunities</h2>
+        <p>We shall let you know of our new opportunities...</p>
+    </section>
+
+    <div class="footer">
+        <h3>Contact info</h3>
+        <p><i class="fas fa-map-marker-alt"></i>Kampala, Uganda</p>
+        <p><i class="fas fa-envelope"></i>senkasimicheal1@gmail.com</p>
+        <p><i class="fas fa-phone"></i>+256-772-726-380</p>
+        <h1 class="credit">created by <a href="https://ug.linkedin.com/in/micheal-senkasi-846182233?trk=public_profile_browsemap">Senkasi Micheal</a> all rights reserved.</h1>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        const nav = document.querySelector('header nav');
+        nav.addEventListener('click', () => {
+            nav.querySelector('ul').classList.toggle('visible');
+        });
+
+        const aboutLink = document.querySelector('a[href="#about"]');
+        const aboutSection = document.querySelector('#about');
+        const home_formulas1Section = document.querySelector('#home_formulas1');
+        const home_formulas2Section = document.querySelector('#home_formulas2');
+        const home_formulas3Section = document.querySelector('#home_formulas3');
+
+        aboutLink.addEventListener('click', (event) => {
+            event.preventDefault();
+            if (aboutSection.style.display === 'none') {
+                aboutSection.style.display = 'block';
+                contactSection.style.display = 'none';
+                learnSection.style.display = 'none';
+                projectsSection.style.display = 'none';
+                opportunitiesSection.style.display = 'none';
+                home_formulas1Section.style.display = 'none';
+                home_formulas2Section.style.display = 'none';
+                home_formulas3Section.style.display = 'none';
+            } else {
+                aboutSection.style.display = 'block';
+                contactSection.style.display = 'none';
+                learnSection.style.display = 'none';
+                projectsSection.style.display = 'none';
+                opportunitiesSection.style.display = 'none';
+                home_formulas1Section.style.display = 'none';
+                home_formulas2Section.style.display = 'none';
+                home_formulas3Section.style.display = 'none';
+            }
+        });
+
+        const contactLink = document.querySelector('a[href="#contact"]');
+        const contactSection = document.querySelector('#contact');
+
+        contactLink.addEventListener('click', (event) => {
+            event.preventDefault();
+            if (contactSection.style.display === 'none') {
+                contactSection.style.display = 'block';
+                aboutSection.style.display = 'none';
+                learnSection.style.display = 'none';
+                projectsSection.style.display = 'none';
+                opportunitiesSection.style.display = 'none';
+                home_formulas1Section.style.display = 'none';
+                home_formulas2Section.style.display = 'none';
+                home_formulas3Section.style.display = 'none';
+            } else {
+                contactSection.style.display = 'block';
+                aboutSection.style.display = 'none';
+                learnSection.style.display = 'none';
+                projectsSection.style.display = 'none';
+                opportunitiesSection.style.display = 'none';
+                home_formulas1Section.style.display = 'none';
+                home_formulas2Section.style.display = 'none';
+                home_formulas3Section.style.display = 'none';
+            }
+        });
+
+        const learnLink = document.querySelector('a[href="#learn"]');
+        const learnSection = document.querySelector('#learn');
+
+        learnLink.addEventListener('click', (event) => {
+            event.preventDefault();
+            if (learnSection.style.display === 'none') {
+                learnSection.style.display = 'block';
+                aboutSection.style.display = 'none';
+                contactSection.style.display = 'none';
+                projectsSection.style.display = 'none';
+                opportunitiesSection.style.display = 'none';
+                home_formulas1Section.style.display = 'none';
+                home_formulas2Section.style.display = 'none';
+                home_formulas3Section.style.display = 'none';
+            } else {
+                learnSection.style.display = 'block';
+                aboutSection.style.display = 'none';
+                contactSection.style.display = 'none';
+                projectsSection.style.display = 'none';
+                opportunitiesSection.style.display = 'none';
+                home_formulas1Section.style.display = 'none';
+                home_formulas2Section.style.display = 'none';
+                home_formulas3Section.style.display = 'none';
+            }
+        });
+
+        const projectsLink = document.querySelector('a[href="#projects"]');
+        const projectsSection = document.querySelector('#projects');
+
+        projectsLink.addEventListener('click', (event) => {
+            event.preventDefault();
+            if (projectsSection.style.display === 'none') {
+                projectsSection.style.display = 'block';
+                aboutSection.style.display = 'none';
+                contactSection.style.display = 'none';
+                learnSection.style.display = 'none';
+                opportunitiesSection.style.display = 'none';
+                home_formulas1Section.style.display = 'none';
+                home_formulas2Section.style.display = 'none';
+                home_formulas3Section.style.display = 'none';
+            } else {
+                projectsSection.style.display = 'block';
+                aboutSection.style.display = 'none';
+                contactSection.style.display = 'none';
+                learnSection.style.display = 'none';
+                opportunitiesSection.style.display = 'none';
+                home_formulas1Section.style.display = 'none';
+                home_formulas2Section.style.display = 'none';
+                home_formulas3Section.style.display = 'none';
+            }
+        });
+
+        const opportunitiesLink = document.querySelector('a[href="#opportunities"]');
+        const opportunitiesSection = document.querySelector('#opportunities');
+
+        opportunitiesLink.addEventListener('click', (event) => {
+            event.preventDefault();
+            if (opportunitiesSection.style.display === 'none') {
+                opportunitiesSection.style.display = 'block';
+                aboutSection.style.display = 'none';
+                contactSection.style.display = 'none';
+                learnSection.style.display = 'none';
+                projectsSection.style.display = 'none';
+                home_formulas1Section.style.display = 'none';
+                home_formulas2Section.style.display = 'none';
+                home_formulas3Section.style.display = 'none';
+            } else {
+                opportunitiesSection.style.display = 'block';
+                aboutSection.style.display = 'none';
+                contactSection.style.display = 'none';
+                learnSection.style.display = 'none';
+                projectsSection.style.display = 'none';
+                home_formulas1Section.style.display = 'none';
+                home_formulas2Section.style.display = 'none';
+                home_formulas3Section.style.display = 'none';
+            }
+        });
+    </script>
+
+</body>
+
+</html>

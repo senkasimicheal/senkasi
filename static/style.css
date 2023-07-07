@@ -1,0 +1,209 @@
+/* Add your styles here */
+
+header {
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    height: 100px;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav li {
+    margin: 0 10px;
+}
+
+.list_about {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.list_about li {
+    margin: 0 10px;
+}
+
+#about {
+    display: none;
+}
+
+#contact {
+    display: none;
+}
+
+#learn {
+    display: none;
+}
+
+#projects {
+    display: none;
+}
+
+#opportunities {
+    display: none;
+}
+
+table,
+th,
+td {
+    border: 0.05rem solid black;
+    border-collapse: collapse;
+}
+
+#education {
+    display: none;
+}
+
+#experience {
+    display: none;
+}
+
+#skills {
+    display: none;
+}
+
+.contact_form_div {
+    width: 50rem;
+}
+
+.section_body .contact_form_div form {
+    flex: 1 1 50rem;
+    background: #222;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+    align-items: flex-start;
+}
+
+.section_body .contact_form_div form .box {
+    height: 2rem;
+    width: 49%;
+    border: .1rem solid #eee;
+    padding: 0 1rem;
+    margin: 1rem 0;
+    font-size: 1.7rem;
+    color: #fff;
+    background: none;
+    text-transform: none;
+}
+
+.section_body .contact_form_div form .box:focus {
+    border-color: #f39c12;
+}
+
+.section_body .contact_form_div form .box::placeholder {
+    text-transform: capitalize;
+}
+
+.section_body .contact_form_div form .address {
+    height: 15rem;
+    padding: 1rem;
+    resize: none;
+    width: 100%;
+}
+
+.section_body .contact_form_div form .btn:hover {
+    background: #fff;
+    color: #333;
+}
+
+@keyframes example {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+#myProgress {
+    width: 100%;
+    background-color: #ddd;
+}
+
+#myBar {
+    width: 0%;
+    height: 50px;
+    background-color: #cdf0ce;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: green;
+}
+
+.footer {
+    background: #333;
+    height: 100%;
+}
+
+.footer .credit {
+    padding: 2rem 1rem;
+    font-size: 1rem;
+    color: #fff;
+    text-align: center;
+    font-weight: normal;
+}
+
+.footer .credit a {
+    color: #f39c12;
+}
+
+.footer p {
+    color: white;
+    text-align: center;
+    justify-content: center;
+}
+
+.footer h3 {
+    color: white;
+    text-align: center;
+    justify-content: center;
+}
+
+
+/* Add this media query to show a menu button on smaller screens */
+
+@media (max-width: 600px) {
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 5rem;
+    }
+    header nav::after {
+        content: "☰";
+        font-size: 30px;
+        cursor: pointer;
+    }
+    /* Add these styles for the .visible class */
+    header nav ul.visible {
+        display: flex;
+    }
+    .section_body {
+        margin-top: 3.8rem;
+    }
+    .home_formulas {
+        margin-top: 4.5rem;
+    }
+    .section_body ul {
+        flex-direction: column;
+    }
+}
