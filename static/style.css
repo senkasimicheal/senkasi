@@ -196,8 +196,6 @@ body {
             user-select: none;
             -webkit-user-select: none;
             -ms-user-select: none;
-            margin: 0 !important;
-            padding: 0 !important;
         }
         #loader {
             position: fixed;
@@ -247,8 +245,6 @@ body {
         user-select: none;
         -webkit-user-select: none;
         -ms-user-select: none;
-        margin: 0 !important;
-        padding: 0 !important;
     }
     #loader {
         position: fixed;
