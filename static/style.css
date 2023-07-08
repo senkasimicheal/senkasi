@@ -89,7 +89,7 @@ td {
     height: 15rem;
     padding: 1rem;
     resize: none;
-    width: 100%;
+    width: 49%;
 }
 
 .section_body .contact_form_div form .btn:hover {
@@ -188,7 +188,7 @@ body {
 
 /* Add this media query to show a menu button on smaller screens */
 
-@media (max-width: 780px) {
+@media only screen and (max-width: 800px) {
     header nav ul {
         display: none;
         flex-direction: column;
@@ -229,5 +229,17 @@ body {
         -webkit-transform-origin: 0 0;
         transform: scale(1);
         transform-origin: 0 0;
+    }
+    #loader {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 20;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
