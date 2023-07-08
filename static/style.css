@@ -194,28 +194,6 @@ body {
 /* Add this media query to show a menu button on smaller screens */
 
 @media only screen and (max-width: 780px) {
-    @media (orientation: portrait) {
-        body {
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            overflow-x: hidden;
-            touch-action: pan-pinch-zoom;
-        }
-        #loader {
-            position: fixed;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 20;
-            background: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-    }
     header nav ul {
         display: none;
         flex-direction: column;
@@ -252,9 +230,6 @@ body {
     body {
         overflow-x: hidden;
         touch-action: pan-pinch-zoom;
-        user-select: none;
-        -webkit-user-select: none;
-        -ms-user-select: none;
     }
     #loader {
         position: fixed;
