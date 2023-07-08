@@ -185,11 +185,6 @@ body {
     }
 }
 
-body {
-    margin: 0;
-    padding: 0;
-}
-
 
 /* Add this media query to show a menu button on smaller screens */
 
@@ -224,12 +219,9 @@ body {
         flex-direction: column;
     }
     body {
-        margin: 0;
-        padding: 0;
-    }
-    body {
         overflow-x: hidden;
         touch-action: pan-pinch-zoom;
+        width: auto;
     }
     #loader {
         position: fixed;
