@@ -202,9 +202,6 @@ body {
         body {
             overflow-x: hidden;
             touch-action: pan-pinch-zoom;
-            user-select: none;
-            -webkit-user-select: none;
-            -ms-user-select: none;
         }
         #loader {
             position: fixed;
