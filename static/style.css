@@ -219,9 +219,9 @@ body {
         flex-direction: column;
     }
     body {
+        margin: 0;
+        padding: 0;
         overflow-x: hidden;
-        touch-action: pan-pinch-zoom;
-        width: auto;
     }
     #loader {
         position: fixed;
@@ -234,5 +234,11 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+    section {
+        padding: 1rem;
+    }
+    .footer {
+        padding: 0.5rem;
     }
 }
