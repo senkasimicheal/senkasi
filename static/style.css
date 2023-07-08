@@ -188,7 +188,7 @@ body {
 
 /* Add this media query to show a menu button on smaller screens */
 
-@media only screen and (max-width: 780px) {
+@media (max-width: 780px) {
     header nav ul {
         display: none;
         flex-direction: column;
@@ -218,9 +218,6 @@ body {
     .section_body ul {
         flex-direction: column;
     }
-    body {
-        overflow-x: hidden;
-    }
     #loader {
         position: fixed;
         left: 0;
@@ -232,11 +229,5 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-    }
-    section {
-        padding: 1rem;
-    }
-    .footer {
-        padding: 0.5rem;
     }
 }
