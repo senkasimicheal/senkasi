@@ -34,7 +34,7 @@ header nav li {
 table,
 th,
 td {
-    border: 0.05rem solid black;
+    border: 0.1rem solid black;
     border-collapse: collapse;
 }
 
@@ -224,6 +224,8 @@ body {
         user-select: none;
         -webkit-user-select: none;
         -ms-user-select: none;
+        margin: 0 !important;
+        padding: 0 !important;
     }
     #loader {
         position: fixed;
