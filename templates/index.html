@@ -12,12 +12,13 @@
     <title>My Webpage</title>
 </head>
 
-<body>
+<body onload="hideLoader()">
     <header>
         <img src="/static/micheal.jpg" alt="Senkasi Micheal">
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
+                <li><a href="#Services_offered">Services offered</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="#learn">Learn</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -25,30 +26,28 @@
             </ul>
         </nav>
     </header>
-    <section class="home_formulas">
+    <div id="loader">
+        <div class="loading"></div>
+    </div>
+    <script>
+        // Function to hide the loader
+        function hideLoader() {
+            setTimeout(function() {
+                document.getElementById("loader").style.display = "none";
+            }, 3000);
+        }
+    </script>
+    <section>
         <h3>Work with Senkasi Micheal, statistics, coding, other business</h3>
         <p>Contact us for business</p>
     </section>
-    <section id="home_formulas1">
-        <div id="myProgress">
-            <div id="myBar">$$\chi^2 = \sum_{i=1}^{n} \frac{(O_i - E_i)^2}{E_i}$$</div>
-        </div>
-    </section>
 
-    <section id="home_formulas2">
-        <div id="myProgress">
-            <div id="myBar">$$\hat{y} = \beta_0 + \beta_1x$$</div>
-        </div>
+    <section id="video">
+        <video width="320" height="240" muted loop autoplay>
+                <source src="/static/3. What is the difference between Analysis and Analytics.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
     </section>
-
-    <section id="home_formulas3">
-        <div id="myProgress">
-            <div id="myBar">$$p = \frac{1}{1 + e^{-(\beta_0 + \beta_1x)}}$$</div>
-        </div>
-    </section>
-
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 
     <section id="about" class="section_body">
         <h2>About Senkasi Micheal</h2>
@@ -180,17 +179,15 @@
         </script>
     </section>
 
-    <section id="contact" aria-colspan="" class="section_body">
-        <h2>Contact us</h2>
-        <div class="contact_form_div">
-            <form action="">
-                <input type="text" placeholder="full name" class="box" required>
-                <input type="email" placeholder="your email address" class="box" required>
-                <input type="tel" placeholder="telephone number" class="box">
-                <textarea name="" id="" cols="30" rows="10" class="box address" placeholder="describe your querry"></textarea>
-                <input type="submit" class="btn" value="send now ">
-            </form>
-        </div>
+    <section id="Services_offered">
+        <h3>Find out the services we offer</h3>
+        <p>1. Data cleaning</p>
+        <p>2. Data analysis</p>
+        <p>3. Data interpretation</p>
+        <p>4. Data presentation</p>
+        <p>5. Machine learning</p>
+        <p>6. Learning services on how to use statistical packages like STATA, SPSS, R, Python</p>
+        <p>7. Questionnaire design</p>
     </section>
 
     <section id="learn" class="section_body">
@@ -248,6 +245,19 @@
         <p>We shall let you know of our new opportunities...</p>
     </section>
 
+    <section id="contact" aria-colspan="" class="section_body">
+        <h2>Contact us</h2>
+        <div class="contact_form_div">
+            <form action="">
+                <input type="text" placeholder="full name" class="box" required>
+                <input type="email" placeholder="your email address" class="box" required>
+                <input type="tel" placeholder="telephone number" class="box">
+                <textarea name="" id="" cols="30" rows="10" class="box address" placeholder="describe your querry"></textarea>
+                <input type="submit" class="btn" value="send now ">
+            </form>
+        </div>
+    </section>
+
     <div class="footer">
         <h3>Contact info</h3>
         <p><i class="fas fa-map-marker-alt"></i>Kampala, Uganda</p>
@@ -262,139 +272,6 @@
         const nav = document.querySelector('header nav');
         nav.addEventListener('click', () => {
             nav.querySelector('ul').classList.toggle('visible');
-        });
-
-        const aboutLink = document.querySelector('a[href="#about"]');
-        const aboutSection = document.querySelector('#about');
-        const home_formulas1Section = document.querySelector('#home_formulas1');
-        const home_formulas2Section = document.querySelector('#home_formulas2');
-        const home_formulas3Section = document.querySelector('#home_formulas3');
-
-        aboutLink.addEventListener('click', (event) => {
-            event.preventDefault();
-            if (aboutSection.style.display === 'none') {
-                aboutSection.style.display = 'block';
-                contactSection.style.display = 'none';
-                learnSection.style.display = 'none';
-                projectsSection.style.display = 'none';
-                opportunitiesSection.style.display = 'none';
-                home_formulas1Section.style.display = 'none';
-                home_formulas2Section.style.display = 'none';
-                home_formulas3Section.style.display = 'none';
-            } else {
-                aboutSection.style.display = 'block';
-                contactSection.style.display = 'none';
-                learnSection.style.display = 'none';
-                projectsSection.style.display = 'none';
-                opportunitiesSection.style.display = 'none';
-                home_formulas1Section.style.display = 'none';
-                home_formulas2Section.style.display = 'none';
-                home_formulas3Section.style.display = 'none';
-            }
-        });
-
-        const contactLink = document.querySelector('a[href="#contact"]');
-        const contactSection = document.querySelector('#contact');
-
-        contactLink.addEventListener('click', (event) => {
-            event.preventDefault();
-            if (contactSection.style.display === 'none') {
-                contactSection.style.display = 'block';
-                aboutSection.style.display = 'none';
-                learnSection.style.display = 'none';
-                projectsSection.style.display = 'none';
-                opportunitiesSection.style.display = 'none';
-                home_formulas1Section.style.display = 'none';
-                home_formulas2Section.style.display = 'none';
-                home_formulas3Section.style.display = 'none';
-            } else {
-                contactSection.style.display = 'block';
-                aboutSection.style.display = 'none';
-                learnSection.style.display = 'none';
-                projectsSection.style.display = 'none';
-                opportunitiesSection.style.display = 'none';
-                home_formulas1Section.style.display = 'none';
-                home_formulas2Section.style.display = 'none';
-                home_formulas3Section.style.display = 'none';
-            }
-        });
-
-        const learnLink = document.querySelector('a[href="#learn"]');
-        const learnSection = document.querySelector('#learn');
-
-        learnLink.addEventListener('click', (event) => {
-            event.preventDefault();
-            if (learnSection.style.display === 'none') {
-                learnSection.style.display = 'block';
-                aboutSection.style.display = 'none';
-                contactSection.style.display = 'none';
-                projectsSection.style.display = 'none';
-                opportunitiesSection.style.display = 'none';
-                home_formulas1Section.style.display = 'none';
-                home_formulas2Section.style.display = 'none';
-                home_formulas3Section.style.display = 'none';
-            } else {
-                learnSection.style.display = 'block';
-                aboutSection.style.display = 'none';
-                contactSection.style.display = 'none';
-                projectsSection.style.display = 'none';
-                opportunitiesSection.style.display = 'none';
-                home_formulas1Section.style.display = 'none';
-                home_formulas2Section.style.display = 'none';
-                home_formulas3Section.style.display = 'none';
-            }
-        });
-
-        const projectsLink = document.querySelector('a[href="#projects"]');
-        const projectsSection = document.querySelector('#projects');
-
-        projectsLink.addEventListener('click', (event) => {
-            event.preventDefault();
-            if (projectsSection.style.display === 'none') {
-                projectsSection.style.display = 'block';
-                aboutSection.style.display = 'none';
-                contactSection.style.display = 'none';
-                learnSection.style.display = 'none';
-                opportunitiesSection.style.display = 'none';
-                home_formulas1Section.style.display = 'none';
-                home_formulas2Section.style.display = 'none';
-                home_formulas3Section.style.display = 'none';
-            } else {
-                projectsSection.style.display = 'block';
-                aboutSection.style.display = 'none';
-                contactSection.style.display = 'none';
-                learnSection.style.display = 'none';
-                opportunitiesSection.style.display = 'none';
-                home_formulas1Section.style.display = 'none';
-                home_formulas2Section.style.display = 'none';
-                home_formulas3Section.style.display = 'none';
-            }
-        });
-
-        const opportunitiesLink = document.querySelector('a[href="#opportunities"]');
-        const opportunitiesSection = document.querySelector('#opportunities');
-
-        opportunitiesLink.addEventListener('click', (event) => {
-            event.preventDefault();
-            if (opportunitiesSection.style.display === 'none') {
-                opportunitiesSection.style.display = 'block';
-                aboutSection.style.display = 'none';
-                contactSection.style.display = 'none';
-                learnSection.style.display = 'none';
-                projectsSection.style.display = 'none';
-                home_formulas1Section.style.display = 'none';
-                home_formulas2Section.style.display = 'none';
-                home_formulas3Section.style.display = 'none';
-            } else {
-                opportunitiesSection.style.display = 'block';
-                aboutSection.style.display = 'none';
-                contactSection.style.display = 'none';
-                learnSection.style.display = 'none';
-                projectsSection.style.display = 'none';
-                home_formulas1Section.style.display = 'none';
-                home_formulas2Section.style.display = 'none';
-                home_formulas3Section.style.display = 'none';
-            }
         });
     </script>
 
