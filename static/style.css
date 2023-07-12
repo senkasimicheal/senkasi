@@ -188,7 +188,7 @@ body {
 
 /* Add this media query to show a menu button on smaller screens */
 
-@media (max-width: 780px) {
+@media (max-width: 780px) and (orientation: portrait) {
     body {
         margin: 0;
         padding: 0;
