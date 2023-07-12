@@ -146,6 +146,8 @@ a:hover {
 }
 
 body {
+    margin: 0;
+    padding: 0;
     background-color: #2F4F4F;
     color: white;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -188,13 +190,9 @@ body {
 
 /* Add this media query to show a menu button on smaller screens */
 
-@media (max-width: 780px) and (orientation: portrait) {
-    body {
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden;
-        max-width: 100%;
-        box-sizing: border-box;
+@media (max-width:768px) {
+    html {
+        font-size: 65%;
     }
     header nav ul {
         display: none;
@@ -237,59 +235,4 @@ body {
         justify-content: center;
         align-items: center;
     }
-}
-
-@media (max-width: 780px) and (orientation: landscape) {
-    body {
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden;
-        max-width: 100%;
-        box-sizing: border-box;
-    }
-    header nav ul {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 5rem;
-        margin-left: 3em;
-        position: absolute;
-        right: 0;
-        border: 0.25rem solid black;
-        background-color: rgb(186, 231, 235);
-        border-radius: 1rem;
-        margin-top: -2.2rem;
-    }
-    header nav::after {
-        content: "☰";
-        font-size: 30px;
-        cursor: pointer;
-        margin-left: 3em;
-        position: absolute;
-        right: 0;
-        margin-top: -3rem;
-    }
-    /* Add these styles for the .visible class */
-    header nav ul.visible {
-        display: flex;
-    }
-    .section_body ul {
-        flex-direction: column;
-    }
-    #loader {
-        position: fixed;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 20;
-        background: #fff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-}
-
-* {
-    outline: 1px solid red;
 }
