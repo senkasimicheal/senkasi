@@ -189,6 +189,13 @@ body {
 /* Add this media query to show a menu button on smaller screens */
 
 @media (max-width: 780px) {
+    body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
     header nav ul {
         display: none;
         flex-direction: column;
@@ -230,4 +237,8 @@ body {
         justify-content: center;
         align-items: center;
     }
+}
+
+* {
+    outline: 1px solid red;
 }
