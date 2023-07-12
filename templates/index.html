@@ -5,18 +5,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <link href="/favicon.ico" type="image/x-icon" rel="icon" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <title>My Webpage</title>
 </head>
 
-<body onload="hideLoader()">
+<body>
     <header>
         <img src="/static/micheal.jpg" alt="Senkasi Micheal">
-        <nav>
-            <ul>
+        <nav class="navbar">
+            <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#Services_offered">Services offered</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -25,19 +25,14 @@
                 <li><a href="#opportunities">Opportunities</a></li>
             </ul>
         </nav>
+
+        <script>
+            document.querySelector('.menu-icon').addEventListener('click', function() {
+                this.classList.toggle('menu-open');
+            });
+        </script>
     </header>
-    <div id="loader">
-        <div class="loading"></div>
-    </div>
-    <script>
-        // Function to hide the loader
-        function hideLoader() {
-            setTimeout(function() {
-                document.getElementById("loader").style.display = "none";
-            }, 3000);
-        }
-    </script>
-    <section>
+    <section class="top_section">
         <h3>Work with Senkasi Micheal, statistics, coding, other business</h3>
         <p>Contact us for business</p>
     </section>
