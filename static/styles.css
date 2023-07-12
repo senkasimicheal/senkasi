@@ -20,14 +20,9 @@ section {
     padding-top: 0.25rem;
 }
 
-.top_section {
-    margin-top: 10rem;
-}
-
 header {
     width: 100%;
     display: flex;
-    position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
@@ -76,9 +71,6 @@ header .navbar ul li a:hover {
     }
     header .navbar ul li a:hover {
         color: #f39c12;
-    }
-    .top_section {
-        margin-top: 19rem;
     }
 }
 
@@ -225,4 +217,22 @@ a:hover {
     color: white;
     text-align: center;
     justify-content: center;
+}
+
+p {
+    text-align: justify;
+}
+
+p a {
+    text-decoration: none;
+    color: #f39c12;
+}
+
+.section_body ul li a {
+    text-decoration: none;
+    color: #f39c12;
+}
+
+.section_body ul li a:hover {
+    color: green;
 }
