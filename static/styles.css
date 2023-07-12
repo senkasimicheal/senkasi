@@ -236,3 +236,12 @@ p a {
 .section_body ul li a:hover {
     color: green;
 }
+
+td a {
+    text-decoration: none;
+    color: #f39c12;
+}
+
+td a:hover {
+    color: green;
+}
